@@ -1,6 +1,5 @@
 import pynput
-from pynput.keyboard 
-import Key, Listener
+from pynput.keyboard import Key, Listener
 
 count = 0
 keys = []
@@ -28,7 +27,5 @@ def release(key):
     if key == Key.esc:
         return False
     
-with Listener(on_press=press,
-              on_release=relesae) as listener:
-    listener.join()          
-
+with Listener(on_press=press, on_release=release) as listener:
+    listener.join()    
